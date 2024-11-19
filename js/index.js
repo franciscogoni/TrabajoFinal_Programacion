@@ -17,7 +17,7 @@ fetch('https://dummyjson.com/recipes')
         </article>`;
         }
         listaRecetas.innerHTML = recetas
-})
+}) 
 .catch(function(error){
     console.log(error)
-})
+}) 
