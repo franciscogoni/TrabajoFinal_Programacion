@@ -1,6 +1,7 @@
 let email = document.querySelector('#email')
 let contrasena = document.querySelector('#contra')
 let formulario = document.querySelector('.formulario')
+let link = document.querySelector('.link')
 
 formulario.addEventListener ('submit', function(evento){
     evento.preventDefault()
@@ -11,6 +12,6 @@ formulario.addEventListener ('submit', function(evento){
         alert('Por favor complete el campo contraseña');
         return;
     }else{
-        
+        link.href = './index.html'
     }  
 })
