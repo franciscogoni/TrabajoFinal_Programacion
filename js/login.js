@@ -10,5 +10,7 @@ formulario.addEventListener ('submit', function(evento){
     }else if(contrasena.value == `` ){
         alert('Por favor complete el campo contraseña');
         return;
+    }else{
+        
     }  
 })
