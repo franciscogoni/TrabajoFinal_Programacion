@@ -16,7 +16,7 @@ fetch('https://dummyjson.com/recipes')
           <a href=''>Name: ${data.recipes[i].name}</a>
         </article>`;
         }
-        listaRecetas.innerHTML = recetas
+    listaRecetas.innerHTML = recetas
 }) 
 .catch(function(error){
     console.log(error)
