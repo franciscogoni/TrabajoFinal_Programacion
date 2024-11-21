@@ -24,11 +24,30 @@
         </div>
     </header>
     <main>
-        
+        <form action="" class="registro">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control">
+                <div class="sinMail"><p color = red>Completar la casilla del mail</p></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" class="form-control">
+                <div class="sinContrasena"><p color = red>Completar la casilla de contraseña</p></div>
+            </div>
+            <div>
+                <p>Aceptas los terminos y condiciones?</p>
+                <label for="">Si</label>
+                <input type="radio" name="terminos" value="si" checked>
+                <label for="">No</label>
+                <input type="radio" name="terminos" value="no">
+            </div>
+            <button type="submit" class="">ENVIAR</button>
+        </form>        
     </main>
     <footer>
         <p>Joaquin Lanusse, Francisco Goñi y Alfonso Angelino</p>
     </footer>
-    <script src=""></script>
+    <script src="./js/register.js"></script>
 </body>
 </html>
