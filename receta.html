@@ -4,16 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>etalle de la Receta</title>
-    <link href="./css/styles.css" rel="stylescss">
+    <link href="./css/styles.css" rel="stylesheet">
 </head>
 <body>
-    <h1 class="nombre_receta">Cargando...</h1>
-    <h2>Instrucciones</h2>
-    <p class="instrucciones">Cargando...</p>
-    <p>Tiempo de Cocción: <span class="tiempo_coccion">Cargando...</span></p>
-    <img class="receta_foto" src="" alt="Foto de la receta">
-    <h2>Categorías</h2>
-    <ul class="categorias"></ul>
+    <header>
+        <img src="./imagenes/vecteezy_pizzeria-vector-emblem-on-blackboard-pizza-logo-template_11157900.jpg" alt="logo pizza" class="logo_pizza">
+        <div class="menu">
+            <a href="./login.html">Log In</a>
+            <a href="./index.html">Home</a>
+            <a href="./categorias.html">Categorias</a>
+            <a href="./registro.html">Registro</a>    
+        </div>
+        <div class="caja_buscador"></div>
+            <h1>Buscador</h1>
+            <form method="get" class="formulario" action="./search-results.html">
+                <input type="text" class="buscador_input" placeholder="Buscar...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <h1 class="nombre_receta">Cargando...</h1>
+        <h2>Instrucciones</h2>
+        <p class="instrucciones">Cargando...</p>
+        <p>Tiempo de Cocción: <span class="tiempo_coccion">Cargando...</span></p>
+        <img class="receta_foto" src="" alt="Foto de la receta">
+        <h2>Categorías</h2>
+        <ul class="categorias"></ul>
+    </main>
+    <footer>
+        <p>Joaquin Lanusse, Francisco Goñi y Alfonso Angelino</p>
+    </footer>
     <script src="./js/receta.js"></script>
 </body>
 </html>
