@@ -9,13 +9,12 @@ noContra.style.display = 'none'
 
 form.addEventListener('submit', function(evento){
     evento.preventDefault()
-    if(email.value === ''){
+    if(email.value == ''){
         noMail.style.display = 'block'
-        return
-    }else if(contra.value === ''){
+    }else if(contra.value == ''){
         noContra.style.display = 'block'
-        return
+    }else{
+        this.submit()
     }
-    form.action = "./index.html"
     
 })
