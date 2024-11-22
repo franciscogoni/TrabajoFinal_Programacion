@@ -17,11 +17,24 @@ header {
 justify-content: center;
 display: flex;
 align-items: center;
-gap: 90px
+gap: 300px;
+padding: 10px
 ;
 }
 .logo_pizza{
-    padding-right: 20px
-    ;
-    margin-right: 30px;
+    justify-content: flex-start;
+    border-radius: 200px;
+    
+    
+}
+.menu a{
+    align-items: center;
+    color: black;
+   text-decoration: none;
+font-weight: bold;
+font-size: 18px;
+
+}
+header{
+    background-image: url(".//7b5e64e793d8d9a11642ed1046fe280b.jpg");
 }
