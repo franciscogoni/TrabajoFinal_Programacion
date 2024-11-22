@@ -17,7 +17,7 @@ header {
 justify-content: center;
 display: flex;
 align-items: center;
-gap: 300px;
+gap: 250px;
 padding: 10px
 ;
 }
@@ -32,9 +32,13 @@ padding: 10px
     color: black;
    text-decoration: none;
 font-weight: bold;
-font-size: 18px;
+font-size: 25px;
 
 }
 header{
     background-image: url("../imagenes/7b5e64e793d8d9a11642ed1046fe280b.jpg")
+}
+.caja_buscador h2{
+margin-bottom: -2px;
+margin-left: 40px;
 }
