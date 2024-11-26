@@ -45,7 +45,7 @@ boton.addEventListener('click', function(){
          <h2>${data.recipes[i].name}.</h2>
           <p>Nivel de dificultad: ${data.recipes[i].difficulty} </p>
           <p>Name: ${data.recipes[i].name}</p>
-          <a href='./detalle.html'>Mas detalles</a>
+          <a href='./receta,html'>Mas detalles</a>
         </article>`;
         }
     listaRecetas.innerHTML += recetas
