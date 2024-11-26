@@ -42,6 +42,11 @@ header{
 margin-bottom: -2px;
 margin-left: 40px;
 }
+/*-----------------------footer-----------------------*/
+footer{
+    margin-bottom: 0%;
+}
+
 /*-----------------------index.html-----------------------*/
 
 .recetas{
@@ -55,3 +60,33 @@ margin-left: 40px;
 
 /*-----------------------receta.html-----------------------*/
 
+
+
+
+
+/*-----------------------login.html-----------------------*/
+.main_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 200px;
+}
+.loginCSS{
+    background-color: rgb(255, 204, 61);
+    padding: 50px;
+    border: 10px solid black;
+}
+
+
+/*-----------------------register.html-----------------------*/
+.main_register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 200px;
+}
+.registerCSS{
+    background-color: rgb(255, 204, 61);
+    padding: 50px;
+    border: 10px solid black;
+}
