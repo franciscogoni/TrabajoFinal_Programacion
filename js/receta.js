@@ -1,43 +1,29 @@
-fetch('https://dummyjson.com/recipes') 
+let params = location.search; 
+let recetaID = new URLSearchParams(params);
+let id = recetaID.get("id"); 
+
+fetch(`https://dummyjson.com/recipes/${id}`) 
     .then(function(response) {
         return response.json(); 
     })
     .then(function(data) {
         console.log(data);
 
-        let params = location.search; 
-        let recetaID = new URLSearchParams(params);
-        let id = recetaID.get("id"); 
-        let categoria = recetaID.get("categoria"); 
+        document.querySelector(".nombre_receta").innerText = data.title;
+        let instrucciones = document.querySelector(".instrucciones")
+        for (let index = 0; index < data.instructions.length; index++) {
+            instrucciones.innerText += " " + data.instructions[index]
+            
+        }
+        
+        document.querySelector(".receta_foto").src = data.image;
+        document.querySelector(".receta_foto").alt = "Foto de " + data.title;
 
-        if (id) {
-            let receta = data.recipes.find(function(item) {
-                return item.id == id;
-            });
-
-            if (receta) {
-                
-                document.querySelector(".nombre_receta").textContent = receta.title;
-                document.querySelector(".instrucciones").textContent = receta.instructions;
-                document.querySelector(".receta_foto").src = receta.image;
-                document.querySelector(".receta_foto").alt = "Foto de " + receta.title;
-
-                
-                if (categoria) {
-                    let recetasFiltradas = data.recipes.filter(function(item) {
-                        return item.tags.includes(categoria);
-                    });
-
-                    let listaRecetas = document.querySelector(".lista_recetas");
-                    recetasFiltradas.forEach(function(receta) {
-                        let li = document.createElement("li");
-                        li.textContent = receta.title;
-                        listaRecetas.appendChild(li);
-                    });
-                }
-            } 
-        } 
+        let lista_categorias = document.querySelector(".lista_categorias")
+        for (let index = 0; index < data.tags.length; index++) {
+            lista_categorias.innerHTML += `<li>${data.tags[index]}</li>`    
+        }
     })
     .catch(function(error) {
-        console.error("El error es: " + error);
+        console.log("El error es: " + error);
     });

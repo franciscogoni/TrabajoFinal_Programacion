@@ -2,7 +2,7 @@
     color: black;
     text-decoration: none;
 }
-/* HEADEAR */
+/*-----------------------HEADEAR-----------------------*/
 
 .logo_pizza{
     height: 100px;
@@ -42,3 +42,16 @@ header{
 margin-bottom: -2px;
 margin-left: 40px;
 }
+/*-----------------------index.html-----------------------*/
+
+.recetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+
+/*-----------------------receta.html-----------------------*/
+
