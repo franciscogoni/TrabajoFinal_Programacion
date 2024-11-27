@@ -4,6 +4,10 @@
 }
 /*-----------------------HEADEAR-----------------------*/
 
+body{
+    margin: 0;
+}
+
 .logo_pizza{
     height: 100px;
     width: 100px;
@@ -36,8 +40,10 @@ font-size: 25px;
 
 }
 header{
-    background-image: url("../imagenes/7b5e64e793d8d9a11642ed1046fe280b.jpg")
+    background-image: url("../imagenes/7b5e64e793d8d9a11642ed1046fe280b.jpg");
+    background-size: 100%;
 }
+
 .caja_buscador h2{
 margin-bottom: -2px;
 margin-left: 40px;
@@ -77,6 +83,12 @@ footer{
     border: 10px solid black;
 }
 
+
+@media (max-width: 425px) {
+    .main_login {
+        background-image: url("../imagenes/ingredients-italian-food-with-copy-space.jpg");
+    }
+}
 
 /*-----------------------register.html-----------------------*/
 .main_register{
