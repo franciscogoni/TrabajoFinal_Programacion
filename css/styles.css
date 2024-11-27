@@ -61,6 +61,12 @@ footer{
     justify-content: space-around;
 }
 
+.articulos{
+    border: 5px solid grey;
+    margin: 15px;
+    padding: 5px;
+    background-color: rgb(209, 205, 205);
+}
 
 
 
