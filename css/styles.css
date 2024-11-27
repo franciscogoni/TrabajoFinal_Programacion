@@ -24,7 +24,7 @@ align-items: center;
 gap: 250px;
 padding: 10px;
 size: 100%;
-;
+box-sizing: border-box;
 }
 .logo_pizza{
     justify-content: flex-start;
@@ -48,6 +48,15 @@ header{
 .caja_buscador h2{
 margin-bottom: -2px;
 margin-left: 40px;
+}
+
+@media (max-width: 425px) {
+    header{
+        flex-direction: column;
+        gap: 100px;
+        width: 100%;
+    }
+    
 }
 /*-----------------------footer-----------------------*/
 footer{
@@ -110,6 +119,11 @@ footer{
     background-color: rgb(255, 204, 61);
     padding: 50px;
     border: 10px solid black;
+}
+
+.incompleto{
+    color: red;
+    font-weight: bold;
 }
 
 @media (max-width: 425px){
