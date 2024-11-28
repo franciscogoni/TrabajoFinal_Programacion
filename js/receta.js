@@ -24,6 +24,6 @@ fetch(`https://dummyjson.com/recipes/${id}`)
             lista_categorias.innerHTML += `<li>${data.tags[index]}</li>`    
         }
     })
-    .catch(function(error) {
-        console.log("El error es: " + error);
-    });
+.catch(function(error){
+    console.log(error)
+    }) 

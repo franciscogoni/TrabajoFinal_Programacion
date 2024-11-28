@@ -22,7 +22,7 @@ fetch('https://dummyjson.com/recipe/tags')
                 </li>`;
         }
     })
-    .catch(function(error) {
-        console.error("El error es: " + error); 
-    });
+.catch(function(error){
+    console.log(error)
+    }) 
 
