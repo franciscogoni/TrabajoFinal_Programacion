@@ -1,23 +1,20 @@
-let params = location.search;  
-let queryString = new URLSearchParams(params);  
+let params = location.search;
+let queryString = new URLSearchParams(params);
 let category = queryString.get("category");  
-
 document.querySelector(".tipo_categoria").innerText = category;  
+        
 
-
-fetch(`https://dummyjson.com/recipes?tags=${category}`)
+fetch(`https://dummyjson.com/recipes/tag/${category}`)  
     .then(function(response) {
-        return response.json();  
+        return response.json();
     })
     .then(function(data) {
-        console.log(data);  
-
+        console.log(data);
         
         let listaRecetas = document.querySelector(".recetas_categorias");  
-        let recetasHTML = "";  
+        let recetasHTML = "";
 
-        for (let i = 0; i < data.recipes.length; i++) {
-            let receta = data.recipes[i];
+        for (let receta of data.recipes) {
             recetasHTML += `
                 <article class="receta">
                     <img src="${receta.image}" alt="Imagen de ${receta.name}" class="receta_imagen">
@@ -26,9 +23,9 @@ fetch(`https://dummyjson.com/recipes?tags=${category}`)
                     <a href="./receta.html?id=${receta.id}" class="receta_detalle">Ver más detalles</a>
                 </article>`;
         }
-
-        listaRecetas.innerHTML = recetasHTML;
+        
+        listaRecetas.innerHTML = recetasHTML; 
     })
 .catch(function(error){
     console.log(error)
-    }) 
+        }) 
