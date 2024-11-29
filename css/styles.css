@@ -38,6 +38,7 @@ box-sizing: border-box;
 font-weight: bold;
 font-size: 25px;
 
+
 }
 header{
     background-image: url("../imagenes/7b5e64e793d8d9a11642ed1046fe280b.jpg");
@@ -68,16 +69,32 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
 }
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .articulos{
     border: 5px solid grey;
-    margin: 15px;
-    padding: 5px;
+ 
     background-color: rgb(209, 205, 205);
+    flex-direction: column;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 360px;
 }
-
-
+.articulos img{
+    width: 300px;
+    height: 300px;
+    border-radius: 360px;
+}
 
 /*-----------------------receta.html-----------------------*/
 
@@ -134,3 +151,9 @@ footer{
     }
 }
     
+
+body{
+    background-color: #F2EDD0;
+    background-image: url("../imagenes/png-clipart-sketch-of-pizza-sushi-pizza-drawing-food-line-pizza-symmetry-monochrome.png");
+}
+
