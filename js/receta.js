@@ -22,7 +22,7 @@ fetch(`https://dummyjson.com/recipes/${id}`)
 
         let lista_categorias = document.querySelector(".lista_categorias")
         for (let index = 0; index < data.tags.length; index++) {
-            lista_categorias.innerHTML += `<article class = ><a class= "link_receta" href = "./category.html?id=${data.tags[index]}"> ${data.tags[index]} </a></article>`    
+            lista_categorias.innerHTML += `<article class ="box" ><a class= "link_receta" href = "./category.html?id=${data.tags[index]}"> ${data.tags[index]} </a></article>`    
         }
     })
 .catch(function(error){
