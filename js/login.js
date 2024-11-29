@@ -17,7 +17,10 @@ formulario.addEventListener('submit', function(evento){
     }
 })
 
-formulario.addEventListener('submit', function(error){
+let busc = document.querySelector('.buscador_input')
+let formulario2 = document.querySelector('.formulario')
+
+formulario2.addEventListener('submit', function(error){
     error.preventDefault();
     if (busc.value == ''){
         alert('Debes completar el buscador')

@@ -18,6 +18,10 @@ form.addEventListener('submit', function(evento){
     }
     
 })
+
+let busc = document.querySelector('.buscador_input')
+let formulario = document.querySelector('.formulario')
+
 formulario.addEventListener('submit', function(error){
     error.preventDefault();
     if (busc.value == ''){
