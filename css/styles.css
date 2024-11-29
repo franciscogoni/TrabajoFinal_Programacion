@@ -73,7 +73,7 @@ footer{
 }
 
 .articulos{
-    border: 5px solid grey;
+    border: 5px solid rgb(0, 0, 128);
     margin: 15px;
     padding: 5px;
     background-color: rgb(255, 204, 61);
