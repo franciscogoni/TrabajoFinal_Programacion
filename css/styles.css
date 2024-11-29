@@ -52,10 +52,25 @@ header{
 }
 
 .caja_buscador h2{
-margin-bottom: -2px;
 margin-left: 40px;
 }
-
+.titulo_{
+    text-align: center;
+    border-radius: 50px;
+    background-color: #A7C957;
+    color: #FFFFFF;
+    height: 30px;
+    margin: 10px;
+}
+.search{
+    background-color: #A7C957; 
+    color: #FFFFFF; 
+    border: none; 
+    padding: 5px 10px; 
+    font-size: 10px; 
+    font-weight: bold; 
+    border-radius: 10px;
+}
 /*-----------------------footer-----------------------*/
 footer{
     margin-bottom: 0%;
