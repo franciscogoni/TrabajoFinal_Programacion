@@ -1,6 +1,6 @@
 let params = location.search;
 let queryString = new URLSearchParams(params);
-let category = queryString.get("category");  
+let category = queryString.get("id");  
 document.querySelector(".tipo_categoria").innerText = category;  
         
 
