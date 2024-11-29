@@ -90,7 +90,7 @@ footer{
     align-items: center;
     padding: 10px;
 }
-.nachito{
+.titulo{
     align-items: center;
     display: flex;
     text-align: center;
@@ -345,19 +345,31 @@ body{
         gap: 100px;
         width: 100%;
     }
-}
-@media (max-width: 425px){
     .main_register{
         background-image: url("../imagenes/ingredients-italian-food-with-copy-space.jpg");
         background-size: 100%;
         padding: 30px;
     
     }
-}
-@media (max-width: 425px) {
     .main_login {
         background-image: url("../imagenes/ingredients-italian-food-with-copy-space.jpg");
         background-size: 100%;
         padding: 30px;
+    }
+    .recetas{
+        display: flex;
+        flex-direction: column;
+    }
+    .articulos{
+        width: 80%;
+        border-radius: 5px;
+    }
+    .articulos img{
+        width: 150px;
+        height: 150px;
+    }
+    .titulo{
+        margin: 10px;
+        height: 40px;
     }
 }
