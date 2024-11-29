@@ -101,9 +101,6 @@ footer{
 /*-----------------------receta.html-----------------------*/
 
 
-
-
-
 /*-----------------------login.html-----------------------*/
 .main_login{
     display: flex;
@@ -151,6 +148,25 @@ footer{
     }
 }
     
+/*-----------------------categories.html-----------------------*/
+.lista_categorias{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.link_receta{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
 
 body{
     background-color: #F2EDD0;

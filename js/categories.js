@@ -15,11 +15,11 @@ fetch('https://dummyjson.com/recipe/tags')
         for (let index = 0; index < tags.length; index++) {
             let category = tags[index]; 
             listaCategorias.innerHTML += `
-                <li>
-                    <a href="./category.html?id=${category}">
+                <article>
+                    <a class = "link_receta" href="./category.html?id=${category}">
                         ${category}
                     </a>
-                </li>`;
+                </article>`;
         }
     })
 .catch(function(error){
