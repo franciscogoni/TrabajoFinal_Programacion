@@ -112,6 +112,60 @@ footer{
 
 
 /*-----------------------receta.html-----------------------*/
+.nombre_receta{
+    text-align: center;
+    align-items: center;
+    color: black;
+    background-color: #f5e79b;
+    border: solid black 2px;
+    margin-right: 525px;
+    margin-left: 525px;
+    border-radius: 50px;
+    margin-top: 10px ;
+}
+.title_instrucciones{
+   
+    background-color: #f1ce0b;
+}
+.instrucciones{
+    margin-right: 400px;
+    color: black;
+
+}
+.pulpo h2{
+    text-decoration: underline;
+    text-shadow: #f5e79b;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    background-color: #f5e79b;
+    border: solid;
+    margin-right: 1250px;
+    text-align: center;
+    border-radius: 50px;
+
+}
+.pulpo .instrucciones{
+    margin-left: 15px;
+}
+.pulpo .tiempo_coccion{
+    text-decoration: solid ;
+    color: black;
+    text-decoration: solid;
+    margin-left: 15px;
+    margin-top: 10px;
+    border: black 2px dotted;
+    margin-right: 1200px;
+}
+.receta_foto{
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    margin-left: 475px;
+    border-radius: 360px;
+    
+}
+
+
 
 
 /*-----------------------login.html-----------------------*/
@@ -160,6 +214,7 @@ footer{
         background-image: url("../imagenes/ingredients-italian-food-with-copy-space.jpg");
         background-size: 100%;
         padding: 30px;
+    
     }
 }
     
