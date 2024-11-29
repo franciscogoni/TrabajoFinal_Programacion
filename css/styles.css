@@ -78,6 +78,20 @@ footer{
     padding: 0;
     box-sizing: border-box;
 }
+.nachito{
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #f5e79b;
+    margin-right: 500px;
+    margin-left: 500px;
+    border-radius: 200px;
+    margin-top: 30px;
+    height: 80px;
+    border: 3px solid rgb(0, 0, 0);
+
+}
 .articulos{
     border: 5px solid rgb(0, 0, 128);
  
