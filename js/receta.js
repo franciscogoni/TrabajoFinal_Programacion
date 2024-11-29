@@ -1,50 +1,29 @@
-fetch('https://dummyjson.com/recipes')
-    .then(function (response) {
+let params = location.search; 
+let recetaID = new URLSearchParams(params);
+let id = recetaID.get("id"); 
+
+fetch(`https://dummyjson.com/recipes/${id}`) 
+    .then(function(response) {
         return response.json(); 
     })
-    .then(function (data) {
+    .then(function(data) {
         console.log(data);
 
-        let params = new URLSearchParams(window.location.search);
-        let recetasId = params.get("id"); 
-
-        if (!recetasId) {
-            alert("No se especificó ninguna receta.");
-            window.location.href = "index.html"; 
-            return;
+        document.querySelector(".nombre_receta").innerText = data.title;
+        let instrucciones = document.querySelector(".instrucciones")
+        for (let index = 0; index < data.instructions.length; index++) {
+            instrucciones.innerText += " " + data.instructions[index]
+            
         }
+        
+        document.querySelector(".receta_foto").src = data.image;
+        document.querySelector(".receta_foto").alt = "Foto de " + data.title;
 
-        let receta = null;
-        for (let i = 0; i < data.recipes.length; i++) { 
-            if (data.recipes[i].id == recetasId) {
-                receta = data.recipes[i];
-                break;
-            }
-        }
-
-        if (!receta) {
-            alert("No se encontró la receta.");
-            window.location.href = "index.html";
-            return;
-        }
-
-        document.querySelector(".nombre_receta").textContent = receta.title;
-        document.querySelector(".instrucciones").textContent = receta.instructions;
-        document.querySelector(".tiempo_coccion").textContent = receta.cookingTime || "No especificado";
-        document.querySelector(".receta_foto").src = receta.image;
-        document.querySelector(".receta_foto").alt = "Imagen de " + receta.title;
-
-        let listaCategorias = document.querySelector(".categorias");
-        for (let i = 0; i < receta.tags.length; i++) {
-            let li = document.createElement("li");
-            let enlace = document.createElement("a");
-            enlace.textContent = receta.tags[i];
-            enlace.href = "category.html?category=" + encodeURIComponent(receta.tags[i]);
-            li.appendChild(enlace);
-            listaCategorias.appendChild(li);
+        let lista_categorias = document.querySelector(".lista_categorias")
+        for (let index = 0; index < data.tags.length; index++) {
+            lista_categorias.innerHTML += `<li>${data.tags[index]}</li>`    
         }
     })
-    .catch(function (error) {
-        console.error("Error al obtener los datos:", error);
-        alert("Hubo un problema al cargar los datos.");
-    });
+.catch(function(error){
+    console.log(error)
+    }) 

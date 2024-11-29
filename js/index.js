@@ -9,12 +9,12 @@ fetch('https://dummyjson.com/recipes?limit=10')
     for (let i=0; i<data.recipes.length; i++){
         console.log(i);
 
-       recetas = recetas + `<article class="recetovich">
+       recetas = recetas + `<article class="articulos" class="recetovich">
          <img src=${data.recipes[i].image} alt='' width=100 height=100>
          <h2>${data.recipes[i].name}.</h2>
           <p>Nivel de dificultad: ${data.recipes[i].difficulty} </p>
           <p>Name: ${data.recipes[i].name}</p>
-          <a href='./detalle.html'>Mas detalles</a>
+          <a href='./receta.html?id=${data.recipes[i].id}'>Mas detalles</a>
         </article>`;
         }
     listaRecetas.innerHTML = recetas
@@ -40,12 +40,12 @@ boton.addEventListener('click', function(){
     for (let i=0; i<data.recipes.length; i++){
         console.log(i);
 
-       recetas = recetas + `<article>
+       recetas = recetas + `<article class="articulos">
          <img src=${data.recipes[i].image} alt='' width=100 height=100>
          <h2>${data.recipes[i].name}.</h2>
           <p>Nivel de dificultad: ${data.recipes[i].difficulty} </p>
           <p>Name: ${data.recipes[i].name}</p>
-          <a href='./detalle.html'>Mas detalles</a>
+          <a href='./receta.html?id=${data.recipes[i].id}'>Mas detalles</a>
         </article>`;
         }
     listaRecetas.innerHTML += recetas

@@ -2,7 +2,11 @@
     color: black;
     text-decoration: none;
 }
-/* HEADEAR */
+/*-----------------------HEADEAR-----------------------*/
+
+body{
+    margin: 0;
+}
 
 .logo_pizza{
     height: 100px;
@@ -18,8 +22,9 @@ justify-content: center;
 display: flex;
 align-items: center;
 gap: 250px;
-padding: 10px
-;
+padding: 10px;
+size: 100%;
+box-sizing: border-box;
 }
 .logo_pizza{
     justify-content: flex-start;
@@ -37,12 +42,98 @@ font-size: 25px;
 
 }
 header{
-    background-image: url("../imagenes/7b5e64e793d8d9a11642ed1046fe280b.jpg")
+    background-image: url("../imagenes/7b5e64e793d8d9a11642ed1046fe280b.jpg");
+    background-size: 100%;
 }
+
 .caja_buscador h2{
 margin-bottom: -2px;
 margin-left: 40px;
 }
+
+@media (max-width: 425px) {
+    header{
+        flex-direction: column;
+        gap: 100px;
+        width: 100%;
+    }
+    
+}
+/*-----------------------footer-----------------------*/
+footer{
+    margin-bottom: 0%;
+}
+
+/*-----------------------index.html-----------------------*/
+
+.recetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.articulos{
+    border: 5px solid grey;
+    margin: 15px;
+    padding: 5px;
+    background-color: rgb(209, 205, 205);
+}
+
+
+
+/*-----------------------receta.html-----------------------*/
+
+
+
+
+
+/*-----------------------login.html-----------------------*/
+.main_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px;
+    size: 100%;
+}
+.loginCSS{
+    background-color: rgb(255, 204, 61);
+    padding: 50px;
+    border: 10px solid black;
+}
+
+
+@media (max-width: 425px) {
+    .main_login {
+        background-image: url("../imagenes/ingredients-italian-food-with-copy-space.jpg");
+        background-size: 100%;
+    }
+}
+
+/*-----------------------register.html-----------------------*/
+.main_register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px;
+}
+.registerCSS{
+    background-color: rgb(255, 204, 61);
+    padding: 50px;
+    border: 10px solid black;
+}
+
+.incompleto{
+    color: red;
+    font-weight: bold;
+}
+
+@media (max-width: 425px){
+    .main_register{
+        background-image: url("../imagenes/ingredients-italian-food-with-copy-space.jpg");
+        background-size: 100%;
+    }
+}
+    
 
 body{
     background-color: #F2EDD0;
