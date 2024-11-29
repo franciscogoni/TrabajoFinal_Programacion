@@ -16,3 +16,14 @@ formulario.addEventListener('submit', function(evento){
         this.submit()
     }
 })
+
+formulario.addEventListener('submit', function(error){
+    error.preventDefault();
+    if (busc.value == ''){
+        alert('Debes completar el buscador')
+    }else if (busc.value.length < 3){
+        alert('El buscador debera tener al menos 3 letras')
+    }else{
+        this.submit()
+        }
+    })

@@ -5,12 +5,15 @@ let buscado = document.querySelector('.buscado')
 let busc = document.querySelector('.buscador_input')
 let formulario = document.querySelector('.formulario')
 
+
 fetch(`https://dummyjson.com/recipes/search?q=${busqueda}`)
     .then(function(response) {
         return response.json();
     })
     .then(function(data){
         console.log(data);
+
+
 
 
         let listaBuscada = document.querySelector(".buscador");
@@ -26,8 +29,12 @@ fetch(`https://dummyjson.com/recipes/search?q=${busqueda}`)
         }
 
 
+
+
         listaBuscada.innerHTML = buscadoHTML;
     })
+
+
 
 
 .catch(function(error){
@@ -36,3 +43,34 @@ fetch(`https://dummyjson.com/recipes/search?q=${busqueda}`)
    
 
 
+
+
+formulario.addEventListener('submit', function(error){
+    error.preventDefault();
+    if (busc.value == ''){
+        alert('Debes completar el buscador')
+    }else if (busc.value.length < 3){
+        alert('El buscador debera tener al menos 3 letras l')
+    }else{
+        buscado.innerHTML = `<h1>Resultados de búsqueda para: <b>${busqueda}</b></h1>`
+        for (let busca of data.recipes) {
+            buscadoHTML += `<article class="articulos">
+                <img src="${busca.image}" alt='Imagen de ${busca.image}' width=100 height=100>
+                <h2>${busca.name}.</h2>
+                <p>Nivel de dificultad: ${busca.difficulty}</p>
+                <a href='./receta.html?id=${busca.id}'>Mas detalles</a>
+                </article>`;
+        }
+    }
+    })
+    
+formulario.addEventListener('submit', function(error){
+    error.preventDefault();
+    if (busc.value == ''){
+        alert('Debes completar el buscador')
+    }else if (busc.value.length < 3){
+        alert('El buscador debera tener al menos 3 letras')
+    }else{
+        this.submit()
+        }
+    })

@@ -29,3 +29,13 @@ fetch(`https://dummyjson.com/recipes/tag/${category}`)
 .catch(function(error){
     console.log(error)
         }) 
+        formulario.addEventListener('submit', function(error){
+            error.preventDefault();
+            if (busc.value == ''){
+                alert('Debes completar el buscador')
+            }else if (busc.value.length < 3){
+                alert('El buscador debera tener al menos 3 letras')
+            }else{
+                this.submit()
+                }
+            })
