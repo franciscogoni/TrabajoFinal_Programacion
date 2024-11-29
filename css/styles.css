@@ -70,15 +70,32 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
 }
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .articulos{
     border: 5px solid rgb(0, 0, 128);
-    margin: 15px;
-    padding: 5px;
-    background-color: rgb(255, 204, 61);
+ 
+    background-color: rgb(237, 184, 60);
+    flex-direction: column;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 360px;
 }
-
+.articulos img{
+    width: 300px;
+    height: 300px;
+    border-radius: 360px;
+}
 
 
 /*-----------------------receta.html-----------------------*/
