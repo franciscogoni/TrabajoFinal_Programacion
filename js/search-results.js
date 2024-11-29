@@ -24,7 +24,7 @@ fetch(`https://dummyjson.com/recipes/search?q=${busqueda}`)
                 <img src="${busca.image}" alt='Imagen de ${busca.image}' width=100 height=100>
                 <h2>${busca.name}.</h2>
                 <p>Nivel de dificultad: ${busca.difficulty}</p>
-                <a href='./receta.html?id=${busca.id}'>Mas detalles</a>
+                <a class="link_receta" href='./receta.html?id=${busca.id}'>Mas detalles</a>
                 </article>`;
         }
 

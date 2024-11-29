@@ -38,6 +38,10 @@ box-sizing: border-box;
     
     
 }
+.menu{
+    align-items: center;
+    margin-left: 80px;
+}
 .menu a{
     align-items: center;
     color: #3B3B3B;
@@ -71,7 +75,7 @@ margin-left: 40px;
     font-weight: bold; 
     border-radius: 10px;
 }
-/*-----------------------footer-----------------------*/
+/*-----------------------footer---------------------------*/
 footer{
     margin-bottom: 0%;
 }
@@ -309,6 +313,31 @@ body{
     border-radius: 360px;
     border: 5px solid rgb(242, 237, 208); 
 }
+
+/*-----------------------Search-results.html-----------------------*/
+.buscado{
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #A7C957;
+    color: #FFFFFF;
+    border-radius: 200px;
+    margin-top: 30px;
+    height: 80px;
+    font-size: medium;
+    margin-right: 500px;
+    margin-left: 500px;
+}
+.buscador{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
 /*-----------------------Media Quarry-----------------------*/
 @media (max-width: 425px) {
     header{
