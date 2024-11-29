@@ -140,12 +140,3 @@ body{
     background-image: url("../imagenes/png-clipart-sketch-of-pizza-sushi-pizza-drawing-food-line-pizza-symmetry-monochrome.png");
 }
 
-.recetas{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 500px;
-align-items: center;
-align-self: center;
-justify-content: space-around;
-}
-
