@@ -34,6 +34,7 @@ padding: 10px
 font-weight: bold;
 font-size: 25px;
 
+
 }
 header{
     background-image: url("../imagenes/7b5e64e793d8d9a11642ed1046fe280b.jpg")
@@ -42,3 +43,18 @@ header{
 margin-bottom: -2px;
 margin-left: 40px;
 }
+
+body{
+    background-color: #F2EDD0;
+    background-image: url("../imagenes/png-clipart-sketch-of-pizza-sushi-pizza-drawing-food-line-pizza-symmetry-monochrome.png");
+}
+
+.recetas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 500px;
+align-items: center;
+align-self: center;
+justify-content: space-around;
+}
+
