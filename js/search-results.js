@@ -1,6 +1,10 @@
 let queryString = location.search
 let queryStringObjeto = new URLSearchParams(queryString)
 let busqueda= queryStringObjeto.get("busqueda")
+let buscado = document.querySelector('.buscado')
+let busc = document.querySelector('.buscador_input')
+let formulario = document.querySelector('.formulario')
+
 
 fetch(`https://dummyjson.com/recipes/search?q=${busqueda}`)
     .then(function(response) {
@@ -12,6 +16,22 @@ fetch(`https://dummyjson.com/recipes/search?q=${busqueda}`)
         let listaBuscada = document.querySelector(".buscador");
         let buscadoHTML = "";
 
+        formulario.addEventListener('submit', function(){
+            if(busc.value = ''){
+                buscado.innerHTML = `<h1>DEBES LLENAR EL BUSCADOR</h1>`      
+            }else{
+                buscado.innerHTML = `<h1>Resultados de búsqueda para: <b>${busqueda}</b></h1>`
+                for (let busca of data.recipes) {
+                    buscadoHTML += `<article class="articulos">
+                        <img src="${busca.image}" alt='Imagen de ${busca.image}' width=100 height=100>
+                        <h2>${busca.name}.</h2>
+                        <p>Nivel de dificultad: ${busca.difficulty}</p>
+                        <a href='./receta.html?id=${busca.id}'>Mas detalles</a>
+                        </article>`;
+                }        
+            }
+        })
+        buscado.innerHTML = `<h1>Resultados de búsqueda para: <b>${busqueda}</b></h1>`
         for (let busca of data.recipes) {
             buscadoHTML += `<article class="articulos">
                 <img src="${busca.image}" alt='Imagen de ${busca.image}' width=100 height=100>
@@ -28,3 +48,5 @@ fetch(`https://dummyjson.com/recipes/search?q=${busqueda}`)
     console.log(error)
 }) 
     
+
+

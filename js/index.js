@@ -13,7 +13,6 @@ fetch('https://dummyjson.com/recipes?limit=10')
          <img src=${data.recipes[i].image} alt='' width=100 height=100>
          <h2>${data.recipes[i].name}.</h2>
           <p>Nivel de dificultad: ${data.recipes[i].difficulty} </p>
-          <p>Name: ${data.recipes[i].name}</p>
           <a href='./receta.html?id=${data.recipes[i].id}'>Mas detalles</a>
         </article>`;
         }
