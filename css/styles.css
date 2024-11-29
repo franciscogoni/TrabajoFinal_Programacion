@@ -167,9 +167,6 @@ footer{
     border: 5px solid #A7C957;    
 }
 
-
-
-
 /*-----------------------login.html-----------------------*/
 .main_login{
     display: flex;
@@ -183,16 +180,22 @@ footer{
     padding: 50px;
     border-radius: 360px;
 }
-
-
-@media (max-width: 425px) {
-    .main_login {
-        background-image: url("../imagenes/ingredients-italian-food-with-copy-space.jpg");
-        background-size: 100%;
-        padding: 30px;
-    }
+.btn{
+    background-color: #A7C957; 
+    color: #FFFFFF; 
+    border: none; 
+    padding: 10px 15px; 
+    font-size: 10px; 
+    font-weight: bold; 
+    border-radius: 10px;
 }
-
+.link_registro{
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    color: #3B3B3B;
+}
 /*-----------------------register.html-----------------------*/
 .main_register{
     display: flex;
@@ -209,15 +212,6 @@ footer{
 .incompleto{
     color: red;
     font-weight: bold;
-}
-
-@media (max-width: 425px){
-    .main_register{
-        background-image: url("../imagenes/ingredients-italian-food-with-copy-space.jpg");
-        background-size: 100%;
-        padding: 30px;
-    
-    }
 }
     
 /*-----------------------categories.html-----------------------*/
@@ -261,11 +255,65 @@ body{
     color: #4F4F4F;
     background-image: url("../imagenes/png-clipart-sketch-of-pizza-sushi-pizza-drawing-food-line-pizza-symmetry-monochrome.png");
 }
+/*-----------------------category.html-----------------------*/
+.tipo_categoria {
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #A7C957;
+    color: #FFFFFF;
+    margin-right: 500px;
+    margin-left: 500px;
+    border-radius: 200px;
+    margin-top: 30px;
+    height: 80px;
+}
+
+.recetas_categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.recetas_categorias article {
+    background-color: rgb(242, 237, 208); 
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 360px;
+}
+
+.recetas_categorias img {
+    width: 300px;
+    height: 300px;
+    border-radius: 360px;
+    border: 5px solid rgb(242, 237, 208); 
+}
 /*-----------------------Media Quarry-----------------------*/
 @media (max-width: 425px) {
     header{
         flex-direction: column;
         gap: 100px;
         width: 100%;
+    }
+}
+@media (max-width: 425px){
+    .main_register{
+        background-image: url("../imagenes/ingredients-italian-food-with-copy-space.jpg");
+        background-size: 100%;
+        padding: 30px;
+    
+    }
+}
+@media (max-width: 425px) {
+    .main_login {
+        background-image: url("../imagenes/ingredients-italian-food-with-copy-space.jpg");
+        background-size: 100%;
+        padding: 30px;
     }
 }
