@@ -9,7 +9,8 @@ fetch(`https://dummyjson.com/recipes/${id}`)
     .then(function(data) {
         console.log(data);
 
-        document.querySelector(".nombre_receta").innerText = data.title;
+        document.querySelector(".nombre_receta").innerText = data.name;
+
         let instrucciones = document.querySelector(".instrucciones")
         for (let index = 0; index < data.instructions.length; index++) {
             instrucciones.innerText += " " + data.instructions[index]
@@ -17,7 +18,7 @@ fetch(`https://dummyjson.com/recipes/${id}`)
         }
         
         document.querySelector(".receta_foto").src = data.image;
-        document.querySelector(".receta_foto").alt = "Foto de " + data.title;
+        document.querySelector(".receta_foto").alt = "Foto de " + data.name;
 
         let lista_categorias = document.querySelector(".lista_categorias")
         for (let index = 0; index < data.tags.length; index++) {
