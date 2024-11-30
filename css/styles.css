@@ -340,10 +340,27 @@ body{
 
 /*-----------------------Media Quarry-----------------------*/
 @media (max-width: 425px) {
-    header{
-        flex-direction: column;
-        gap: 100px;
+    header {
+        flex-direction: column; 
+        padding: 10px;
         width: 100%;
+    }
+
+    .logo_pizza {
+        width: 70px; 
+        height: 70px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 15px; 
+        margin: 0; 
+    }
+
+    .menu a {
+        font-size: 20px; 
     }
     .main_register{
         background-image: url("../imagenes/ingredients-italian-food-with-copy-space.jpg");
@@ -372,4 +389,98 @@ body{
         margin: 10px;
         height: 40px;
     }
+    .instrucciones {
+        font-size: 16px; 
+        line-height: 1.5; 
+        text-align: justify; 
+        margin: 10px 15px; 
+    }
+    
+    .pulpo .tiempo_coccion {
+        font-size: 14px; 
+        padding: 8px; 
+        margin: 10px; 
+        border-radius: 5px; 
+        text-align: center; 
+    }
+    .pulpo .receta_foto {
+        width: 80%; 
+        max-width: 300px; 
+        height: auto; 
+        margin: 15px auto; 
+        border-radius: 15px; 
+        border: 3px solid #A7C957; 
+    }
+    .pulpo h2 {
+        font-size: 18px; 
+        text-align: center; 
+        padding: 10px;
+        margin: 10px 15px; 
+        border: 2px solid #A7C957; 
+        border-radius: 10px; 
+        background-color: #A7C957; 
+        color: #FFFFFF; 
+    }
+
+    .nombre_receta {
+        font-size: 20px; 
+        text-align: center; 
+        padding: 15px; 
+        margin: 10px; 
+        border-radius: 15px; 
+        background-color: #A7C957; 
+        color: #FFFFFF; 
+    }
+
+    .buscado {
+        font-size: 18px; 
+        text-align: center; 
+        padding: 10px; 
+        margin: 15px; 
+        border-radius: 10px; 
+        background-color: #A7C957; 
+        color: #FFFFFF; 
+    }
+    .title_catgories {
+        font-size: 20px;
+        text-align: center;
+        padding: 15px;
+        margin: 10px;
+        border-radius: 15px;
+        background-color: #A7C957;
+        color: #FFFFFF;
+    }
+
+    .lista_categorias {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .box {
+        width: 80%;
+        margin: 10px auto;
+        padding: 15px;
+        border-radius: 20px;
+        border: 3px solid #E76F51;
+        background-color: rgb(242, 237, 208);
+    }
+
+    .link_receta {
+        display: block;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: #3B3B3B;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .box img {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    
 }
